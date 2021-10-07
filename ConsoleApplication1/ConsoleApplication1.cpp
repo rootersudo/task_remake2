@@ -1,4 +1,5 @@
 // ConsoleApplication1.cpp : This file contains the 'main' function. Program execution begins and ends there.
+// ConsoleApplication1.cpp : This file contains the 'main' function. Program execution begins and ends there.
 #include <iostream>
 using namespace std;
 
@@ -9,27 +10,28 @@ int main()
         float a, b, c, a1, b1, c1, x, y;
         
         setlocale(0, "RU");
-        cout << "Ââåäèòå âñå êîýôèöèåíòû äëÿ óðàâíåíèÿ ïðÿìîé âèäà ax+by+c=0\n";
+        cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð²ÑÐµ ÐºÐ¾ÑÑ„Ð¸Ñ†Ð¸ÐµÐ½Ñ‚Ñ‹ Ð´Ð»Ñ ÑƒÑ€Ð°Ð²Ð½ÐµÐ½Ð¸Ñ Ð¿Ñ€ÑÐ¼Ð¾Ð¹ Ð²Ð¸Ð´Ð° ax+by+c=0\n";
 
         cin >> a >> b >> c;
-        cout << "Ââåäèòå êîýôôèöèåíòû äëÿ âòîðîé ïðÿìîé òîãîæå âèäà\n";
+        cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾ÑÑ„Ñ„Ð¸Ñ†Ð¸ÐµÐ½Ñ‚Ñ‹ Ð´Ð»Ñ Ð²Ñ‚Ð¾Ñ€Ð¾Ð¹ Ð¿Ñ€ÑÐ¼Ð¾Ð¹ Ñ‚Ð¾Ð³Ð¾Ð¶Ðµ Ð²Ð¸Ð´Ð°\n";
 
         cin >> a1 >> b1 >> c1;
         
 
-        if (((a * b1) == (b * a1)) == (a * c1)==(c*b1)) {
-            cout << "Ïðÿìûå ñîâïàäàþò\n";
+        if ((a * c1) == (a1 * c) && (b * c1)==(b1*c)) {
+            cout << "ÐŸÑ€ÑÐ¼Ñ‹Ðµ ÑÐ¾Ð²Ð¿Ð°Ð´Ð°ÑŽÑ‚\n";
             g = 1;
         }
         else if ((a * b1 == b * a1) && (a * c1 != c * a1))
-            cout << "Ïðÿìûå ïàðàëëåëüíû\n";
+            cout << "ÐŸÑ€ÑÐ¼Ñ‹Ðµ Ð¿Ð°Ñ€Ð°Ð»Ð»ÐµÐ»ÑŒÐ½Ñ‹\n";
 
         else {
             if ((a * b1 != a1 * b) && (g == 0)) {
                 y = -(c1 * a + c * a1) / (b * a + b1 * a);
                 x = -(b * y + c) / a;
-                cout << "Êîîðäèíàòû òî÷êè ïåðåñå÷åíèÿ: (" << x << ";" << y << ")\n";
-            };
+                cout << "ÐšÐ¾Ð¾Ñ€Ð´Ð¸Ð½Ð°Ñ‚Ñ‹ Ñ‚Ð¾Ñ‡ÐºÐ¸ Ð¿ÐµÑ€ÐµÑÐµÑ‡ÐµÐ½Ð¸Ñ: (" << x << ";" << y << ")\n";
+            }
+           
         }
     }
     return 0;
